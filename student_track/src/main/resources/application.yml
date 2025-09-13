@@ -1,19 +1,20 @@
 server:
-  port: 8082
+  port: 8082                       # Your Spring Boot app will run on port 8082
   error:
-    include-message: always
-    include-binding-errors: always
+    include-message: always        # Include error messages in responses
+    include-binding-errors: always # Include binding errors in responses
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/studentTrack
-    username: postgres
-    password: mysecretpassword
-    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/studenttrack  # DB URL
+    username: postgres                                   # DB username
+    password: 123                           # DB password
+    driver-class-name: org.postgresql.Driver            # Driver class
+
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: true
+      ddl-auto: update           # Automatically update DB schema
+    show-sql: true               # Print SQL queries in console
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # PostgreSQL dialect
