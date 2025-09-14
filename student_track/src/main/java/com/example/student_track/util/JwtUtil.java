@@ -33,4 +33,14 @@ public class JwtUtil {
                 .signWith(getSecretKey())
                 .compact();
     }
+        public static String getEmailFromToken(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(getSecretKey())
+                .build()
+                .parseClaimsJws(token)
+                .getBody()
+                .getSubject();
+    }
+
+
 }
