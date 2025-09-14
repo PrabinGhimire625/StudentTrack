@@ -2,7 +2,6 @@ package com.example.student_track.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-
 import jakarta.annotation.PostConstruct;
 
 import javax.sql.DataSource;
