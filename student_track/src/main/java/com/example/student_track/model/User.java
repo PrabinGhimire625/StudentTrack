@@ -1,6 +1,9 @@
 package com.example.student_track.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.*;   //Imports JPA annotations (@Entity, @Table, @Id, etc.) to map Java objects to database tables.
+// import jakarta.persistence.Entity;
+// import jakarta.persistence.Table;
+// import jakarta.persistence.Id;
 
 @Entity
 @Table(name = "users")
@@ -69,3 +72,5 @@ public class User {
         this.role = role;
     }
 }
+
+

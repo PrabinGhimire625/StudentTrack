@@ -81,7 +81,7 @@ public class AuthController {
     }
 
 
-    // Fetch all users (only admin can access)
+    // Fetch all users 
     @GetMapping("/users")
     public Map<String, Object> getAllUsers(@RequestHeader("Authorization") String authHeader) {
         Map<String, Object> response = new HashMap<>();
