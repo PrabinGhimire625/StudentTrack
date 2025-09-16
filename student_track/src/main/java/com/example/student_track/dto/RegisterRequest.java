@@ -20,9 +20,6 @@ public class RegisterRequest {
     public void setRole(String role) { this.role = role; }
 }
 
-
-
-
 //best alternative with the Lombok 
 // @Data
 // public class RegisterRequest {

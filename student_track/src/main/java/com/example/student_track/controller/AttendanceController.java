@@ -30,4 +30,16 @@ public class AttendanceController {
     public ResponseEntity<List<Attendance>> getTodayAttendance() {
         return ResponseEntity.ok(attendanceService.getAttendanceForToday());
     }
+
+     // Finalize attendance (mark ABSENT)
+    @PostMapping("/finalize")
+    public ResponseEntity<String> finalizeAttendance() {
+        try {
+            String message = attendanceService.finalizeAttendance();
+            return ResponseEntity.ok(message);
+        } catch (Exception e) {
+            return ResponseEntity.status(500).body(e.getMessage());
+        }
+    }
+
 }

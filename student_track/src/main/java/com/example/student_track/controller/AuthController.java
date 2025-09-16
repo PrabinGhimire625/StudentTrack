@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
     @Autowired
@@ -62,7 +62,7 @@ public class AuthController {
 
             // Check if header starts with "Bearer "
             if (authHeader.startsWith("Bearer ")) {
-                token = authHeader.substring(7); // remove "Bearer "
+                token = authHeader.substring(7); 
             }
 
             // Get email from JWT
@@ -111,7 +111,7 @@ public class AuthController {
     }
 
     // Fetch single user by id
-    @GetMapping("/users/{id}")
+    @GetMapping("/singleUser/{id}")
     public Map<String, Object> getUserById(@PathVariable Long id) {
         Map<String, Object> response = new HashMap<>();
         try {

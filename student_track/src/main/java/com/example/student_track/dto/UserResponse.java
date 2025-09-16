@@ -3,7 +3,7 @@ package com.example.student_track.dto;
 public class UserResponse {
     private String username;
     private String email;
-    private String role;  // Added role
+    private String role; 
 
     public UserResponse(String username, String email, String role) {
         this.username = username;
